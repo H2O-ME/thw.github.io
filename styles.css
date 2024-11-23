@@ -1,57 +1,182 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-image: url('https://haowallpaper.com/link/common/file/previewFileImg/adb7d3200b60c25da3a83f61c2526ff8');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #333;
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-.content-section {
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.container {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
     position: relative;
-    min-height: 100vh;
+}
+
+.section {
     width: 100%;
+    height: 100vh;
+    position: relative;
+    scroll-snap-align: start;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.overlay {
+/* 渐变背景效果 */
+.first-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* 遮罩层效果 */
+.white-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     transform: translateY(100%);
-    transition: transform 0.5s ease-out;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.content-section.active .overlay {
+.section.active .white-overlay {
     transform: translateY(0);
 }
 
+/* 内容样式 */
 .content {
     position: relative;
     z-index: 2;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
     text-align: center;
-    padding: 20px 0;
+    padding: 0 20px;
+    max-width: 1200px;
+    width: 100%;
 }
 
-header h1 {
+/* 标题效果 */
+.title-effect {
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.title-effect:hover {
+    transform: scale(1.05);
+}
+
+/* 悬停效果 */
+.hover-effect {
+    transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 按压效果 */
+.press-effect {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.press-effect:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 标签样式 */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.tag {
+    padding: 8px 20px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 25px;
+    font-size: 0.9em;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1),
+                -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+/* 项目卡片样式 */
+.project-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* 滚动提示 */
+.scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     color: white;
-    margin: 0;
+    text-align: center;
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    margin: 10px auto;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* 淡入动画 */
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -42,11 +42,11 @@ nav ul li a:active {
 }
 
 main {
-    padding: 20px;
+    padding: 0; /* 去掉内边距 */
 }
 
 .content-section {
-    padding: 20px;
+    padding: 40px;
     margin: 20px;
     background: rgba(255, 255, 255, 0.7); /* 白色透明70% */
     border-radius: 10px; /* 圆角 */
@@ -54,10 +54,30 @@ main {
     opacity: 0; /* 初始透明度 */
     transition: opacity 0.5s; /* 动态效果 */
     display: block; /* 确保可以显示 */
+    min-height: 100vh; /* 确保每个部分至少占满一屏 */
 }
 
 .content-section.active {
     opacity: 1; /* 显示时的透明度 */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 自适应列数 */
+    gap: 20px; /* 卡片间距 */
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.9); /* 白色透明背景 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 10px; /* 圆角 */
 }
 
 footer {

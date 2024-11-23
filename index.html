@@ -7,39 +7,56 @@
     <title>个人博客</title>
 </head>
 <body>
-    <header>
-        <h1>欢迎来到我的个人博客</h1>
-    </header>
-    
-    <main>
-        <section id="about" class="content-section">
-            <div class="content">
-                <h2>关于我</h2>
-                <p>你好！我是一名热爱编程的开发者，喜欢分享我的学习和项目经验。</p>
-            </div>
-        </section>
-        
-        <section id="projects" class="content-section">
-            <div class="overlay"></div>
-            <div class="content">
-                <h2>我的项目</h2>
-                <div class="project-grid">
-                    <!-- 项目卡片内容 -->
+    <div class="container">
+        <section class="section first-section" id="section1">
+            <div class="content fade-in">
+                <h1 class="title-effect">静水流深</h1>
+                <p class="subtitle hover-effect">/* 这里是毛若昕的个人主页 */</p>
+                <div class="scroll-hint">
+                    <span class="scroll-text">向下滚动</span>
+                    <div class="scroll-arrow"></div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="content-section">
-            <div class="overlay"></div>
+        <section class="section" id="section2">
+            <div class="white-overlay"></div>
             <div class="content">
-                <h2>联系我</h2>
-                <p>你可以通过以下方式联系我：</p>
-                <ul>
-                    <li>Email: example@example.com</li>
-                    <li>电话: 123-456-7890</li>
-                </ul>
+                <h2 class="section-title hover-effect">关于我</h2>
+                <div class="about-content">
+                    <div class="tags">
+                        <span class="tag press-effect">00后</span>
+                        <span class="tag press-effect">XMFLS</span>
+                        <span class="tag press-effect">NJU</span>
+                        <span class="tag press-effect">文科生</span>
+                        <span class="tag press-effect">产品经理</span>
+                        <span class="tag press-effect">独立开发者</span>
+                    </div>
+                    <div class="intro-text hover-effect">
+                        <p>我是毛若昕</p>
+                        <p>一名摸爱爱好者，白日梦想家</p>
+                        <p>某知名视频站的不知名 UP 主</p>
+                    </div>
+                </div>
             </div>
         </section>
-    </main>
+
+        <section class="section" id="section3">
+            <div class="white-overlay"></div>
+            <div class="content">
+                <h2 class="section-title hover-effect">我的项目</h2>
+                <div class="project-grid">
+                    <div class="project-card press-effect">
+                        <img src="project1.jpg" alt="项目1">
+                        <h3>青柠起始页</h3>
+                        <p>简洁、美观、实用的浏览器起始页</p>
+                        <span class="platform">全平台，线上应用</span>
+                    </div>
+                    <!-- 更多项目卡片 -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

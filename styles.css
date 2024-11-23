@@ -30,11 +30,15 @@ nav ul li {
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    transition: color 0.3s; /* 动态效果 */
+    transition: color 0.3s, transform 0.1s; /* 动态效果 */
 }
 
 nav ul li a:hover {
     color: #ffcc00; /* 悬停时的颜色变化 */
+}
+
+nav ul li a:active {
+    transform: translateY(2px); /* 点击时下压效果 */
 }
 
 main {

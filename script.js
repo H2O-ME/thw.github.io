@@ -1,17 +1,42 @@
-function showSection(sectionId) {
-    const sections = document.querySelectorAll('.content-section');
-    sections.forEach(section => {
-        section.classList.remove('active'); // 移除所有部分的活动类
-        section.style.display = 'none'; // 隐藏所有部分
-    });
-    const activeSection = document.getElementById(sectionId);
-    activeSection.style.display = 'block'; // 显示选定部分
-    setTimeout(() => {
-        activeSection.classList.add('active'); // 添加活动类以实现动态效果
-    }, 10); // 确保在显示后添加类
-}
-
-// 默认显示关于我部分
 document.addEventListener('DOMContentLoaded', function() {
-    showSection('about');
+    const sections = document.querySelectorAll('.section');
+    const container = document.querySelector('.container');
+
+    // 添加点击效果
+    document.querySelectorAll('.press-effect').forEach(element => {
+        element.addEventListener('mousedown', () => {
+            element.style.transform = 'scale(0.98) translateY(2px)';
+        });
+        
+        element.addEventListener('mouseup', () => {
+            element.style.transform = 'scale(1) translateY(0)';
+        });
+        
+        element.addEventListener('mouseleave', () => {
+            element.style.transform = 'scale(1) translateY(0)';
+        });
+    });
+
+    function checkScroll() {
+        const scrollPosition = container.scrollTop;
+        const windowHeight = window.innerHeight;
+
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop - windowHeight/2 &&
+                scrollPosition < sectionTop + sectionHeight - windowHeight/2) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+    }
+
+    container.addEventListener('scroll', checkScroll);
+    checkScroll();
+
+    // 平滑滚动
+    container.style.scrollBehavior = 'smooth';
 });

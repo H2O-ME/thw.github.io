@@ -1,79 +1,57 @@
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://haowallpaper.com/link/common/file/previewFileImg/adb7d3200b60c25da3a83f61c2526ff8'); /* 背景图片 */
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://haowallpaper.com/link/common/file/previewFileImg/adb7d3200b60c25da3a83f61c2526ff8');
     background-size: cover;
-    background-attachment: fixed; /* 背景固定 */
     background-position: center;
+    background-attachment: fixed;
     color: #333;
-    overflow-y: scroll; /* 允许上下滚动 */
-}
-
-header {
-    background: rgba(0, 0, 0, 0.7); /* 深色半透明背景 */
-    padding: 20px 0;
-    text-align: center;
-    border-radius: 10px; /* 圆角 */
-    margin: 20px;
-}
-
-main {
-    padding: 0; /* 去掉内边距 */
+    overflow-x: hidden;
 }
 
 .content-section {
-    padding: 40px;
-    margin: 20px;
-    background: rgba(255, 255, 255, 0.7); /* 白色透明70% */
-    border-radius: 10px; /* 圆角 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    opacity: 0; /* 初始透明度 */
-    transition: opacity 0.5s; /* 动态效果 */
-    display: block; /* 确保可以显示 */
-    min-height: 100vh; /* 确保每个部分至少占满一屏 */
-}
-
-.content-section.active {
-    opacity: 1; /* 显示时的透明度 */
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.9); /* 白色遮罩层 */
-    z-index: 1; /* 确保遮罩层在上 */
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(100%);
+    transition: transform 0.5s ease-out;
 }
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 自适应列数 */
-    gap: 20px; /* 卡片间距 */
-    position: relative; /* 使网格相对定位 */
-    z-index: 2; /* 确保项目卡片在遮罩层上 */
+.content-section.active .overlay {
+    transform: translateY(0);
 }
 
-.project-card {
-    background: rgba(255, 255, 255, 0.9); /* 白色透明背景 */
-    border-radius: 10px; /* 圆角 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     text-align: center;
+    padding: 20px 0;
 }
 
-.project-card img {
-    max-width: 100%;
-    border-radius: 10px; /* 圆角 */
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: rgba(0, 0, 0, 0.7); /* 深色半透明背景 */
-    color: #ffffff;
-    border-radius: 10px; /* 圆角 */
-    margin: 20px;
+header h1 {
+    color: white;
+    margin: 0;
 }

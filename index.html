@@ -12,16 +12,14 @@
         <!-- 第一页：首页 -->
         <section class="section first-section" id="section1">
             <div class="content fade-in">
-                <h1 class="title-effect">静水流深</h1>
-                <p class="subtitle hover-effect">/* 这里是毛若昕的个人主页 */</p>
-                <div class="floating-icons">
-                    <div class="icon-item"><i class="fas fa-code"></i></div>
-                    <div class="icon-item"><i class="fas fa-paint-brush"></i></div>
-                    <div class="icon-item"><i class="fas fa-terminal"></i></div>
-                </div>
+                <h1 class="title-effect">前途似海，来日方长</h1>
                 <div class="scroll-hint">
-                    <span class="scroll-text">向下滚动</span>
-                    <div class="scroll-arrow"></div>
+                    <div class="scroll-icons">
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="scroll-text">向下滚动</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <i class="fas fa-chevron-down bounce"></i>
                 </div>
             </div>
         </section>
@@ -33,17 +31,21 @@
                 <h2 class="section-title">关于我</h2>
                 <div class="about-content">
                     <div class="tags">
-                        <span class="tag press-effect">00后</span>
-                        <span class="tag press-effect">XMFLS</span>
-                        <span class="tag press-effect">NJU</span>
-                        <span class="tag press-effect">文科生</span>
-                        <span class="tag press-effect">产品经理</span>
-                        <span class="tag press-effect">独立开发者</span>
+                        <span class="tag">00后</span>
+                        <span class="tag">ISTJ</span>
+                        <span class="tag">高一</span>
+                        <span class="tag">高中生</span>
+                        <span class="tag">米粉</span>
+                        <span class="tag">懒癌晚期</span>
                     </div>
-                    <div class="intro-text hover-effect">
-                        <p>我是毛若昕</p>
-                        <p>一名摸爱爱好者，白日梦想家</p>
-                        <p>某知名视频站的不知名 UP 主</p>
+                    <div class="intro-text">
+                        <p class="name">我是田瀚文</p>
+                        <p class="subtitle">一名苦逼的高中生</p>
+                        <div class="awards">
+                            <p>2006美国时代周刊年度人物</p>
+                            <p>2008感动中国年度人物特别奖</p>
+                            <p>2022年奥林匹克杯获得者</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,36 +56,64 @@
             <div class="white-overlay"></div>
             <div class="content">
                 <h2 class="section-title">我的作品</h2>
-                <div class="project-grid">
-                    <div class="project-card press-effect">
-                        <img src="path/to/qingning.jpg" alt="青柠起始页">
-                        <h3>青柠起始页</h3>
-                        <p>简洁、美观、实用的浏览器起始页</p>
-                        <span class="platform">全平台 线上应用</span>
+                <div class="projects-grid">
+                    <a href="https://xn--6-ti2c86fw58d.rth1.xyz/" class="project-card">
+                        <div class="project-img-wrapper">
+                            <img class="project-img" src="https://github.com/H2O-ME/H2O-ME.github.io/blob/main/static/Screenshot_2024-10-26-17-55-10-131_com.tencent.mobileqq-edit.jpg?raw=true" alt="齐盛六班">
+                        </div>
+                        <div class="project-content">
+                            <h3>齐盛六班</h3>
+                            <p class="project-desc">自制的班级官网</p>
+                            <p class="project-type">Web 应用</p>
+                        </div>
+                    </a>
+
+                    <!-- 项目2 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img class="project-img" src="https://zbqsgz.com/static/image/logob.png" alt="齐盛高中服务器1">
+                        </div>
+                        <div class="project-content">
+                            <h3>齐盛高中服务器1</h3>
+                            <p class="project-desc">伪装的学校官网，可刑可铐</p>
+                            <p class="project-type">Web 应用</p>
+                        </div>
                     </div>
-                    <div class="project-card press-effect">
-                        <img src="path/to/airportal.jpg" alt="AirPortal 空投快传">
-                        <h3>AirPortal 空投快传</h3>
-                        <p>只需浏览器，在任意设备间传输文件</p>
-                        <span class="platform">全平台 线上应用</span>
+
+                    <!-- 项目3 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img class="project-img" src="https://zbqsgz.com/static/image/logob.png" alt="齐盛高中服务器2">
+                        </div>
+                        <div class="project-content">
+                            <h3>齐盛高中服务器2</h3>
+                            <p class="project-desc">热铁盒备份</p>
+                            <p class="project-type">Web 应用</p>
+                        </div>
                     </div>
-                    <div class="project-card press-effect">
-                        <img src="path/to/xmfls.jpg" alt="厦外工程：戊戌年">
-                        <h3>厦外工程：戊戌年</h3>
-                        <p>使用 Unity 3D 引擎还原厦外校园</p>
-                        <span class="platform">Windows 游戏</span>
+
+                    <!-- 项目4 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img class="project-img" src="https://ts3.cn.mm.bing.net/th?id=ODLS.03245701-8d3e-443e-af13-66e289085f86&w=32&h=32&qlt=91&pcl=fffffa&o=6&pid=1.2" alt="GitHub">
+                        </div>
+                        <div class="project-content">
+                            <h3>我的GitHub</h3>
+                            <p class="project-desc">个人代码仓库</p>
+                            <p class="project-type">代码托管</p>
+                        </div>
                     </div>
-                    <div class="project-card press-effect">
-                        <img src="path/to/duye.jpg" alt="度夜">
-                        <h3>度夜</h3>
-                        <p>精心设计的百度深色主题插件</p>
-                        <span class="platform">Chromium 浏览器扩展</span>
-                    </div>
-                    <div class="project-card press-effect">
-                        <img src="path/to/covid.jpg" alt="新冠肺炎进者名录">
-                        <h3>新冠肺炎进者名录</h3>
-                        <p>我们不会忘记。</p>
-                        <span class="platform">全平台 线上应用</span>
+
+                    <!-- 项目5 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img class="project-img" src="https://static.cloudflare.ltd/Bandbbs_CDN/styles/bandbbs_new_svg/logo.svg" alt="米坛社区">
+                        </div>
+                        <div class="project-content">
+                            <h3>米坛社区会员</h3>
+                            <p class="project-desc">智能穿戴设备交流社区</p>
+                            <p class="project-type">社区会员</p>
+                        </div>
                     </div>
                 </div>
             </div>

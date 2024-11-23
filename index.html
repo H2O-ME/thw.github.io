@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>个人博客</title>
 </head>
 <body>
     <div class="container">
+        <!-- 第一页：首页 -->
         <section class="section first-section" id="section1">
             <div class="content fade-in">
                 <h1 class="title-effect">静水流深</h1>
                 <p class="subtitle hover-effect">/* 这里是毛若昕的个人主页 */</p>
+                <div class="floating-icons">
+                    <div class="icon-item"><i class="fas fa-code"></i></div>
+                    <div class="icon-item"><i class="fas fa-paint-brush"></i></div>
+                    <div class="icon-item"><i class="fas fa-terminal"></i></div>
+                </div>
                 <div class="scroll-hint">
                     <span class="scroll-text">向下滚动</span>
                     <div class="scroll-arrow"></div>
@@ -19,10 +26,11 @@
             </div>
         </section>
 
+        <!-- 第二页：关于我 -->
         <section class="section" id="section2">
             <div class="white-overlay"></div>
             <div class="content">
-                <h2 class="section-title hover-effect">关于我</h2>
+                <h2 class="section-title">关于我</h2>
                 <div class="about-content">
                     <div class="tags">
                         <span class="tag press-effect">00后</span>
@@ -41,18 +49,42 @@
             </div>
         </section>
 
+        <!-- 第三页：我的作品 -->
         <section class="section" id="section3">
             <div class="white-overlay"></div>
             <div class="content">
-                <h2 class="section-title hover-effect">我的项目</h2>
+                <h2 class="section-title">我的作品</h2>
                 <div class="project-grid">
                     <div class="project-card press-effect">
-                        <img src="project1.jpg" alt="项目1">
+                        <img src="path/to/qingning.jpg" alt="青柠起始页">
                         <h3>青柠起始页</h3>
                         <p>简洁、美观、实用的浏览器起始页</p>
-                        <span class="platform">全平台，线上应用</span>
+                        <span class="platform">全平台 线上应用</span>
                     </div>
-                    <!-- 更多项目卡片 -->
+                    <div class="project-card press-effect">
+                        <img src="path/to/airportal.jpg" alt="AirPortal 空投快传">
+                        <h3>AirPortal 空投快传</h3>
+                        <p>只需浏览器，在任意设备间传输文件</p>
+                        <span class="platform">全平台 线上应用</span>
+                    </div>
+                    <div class="project-card press-effect">
+                        <img src="path/to/xmfls.jpg" alt="厦外工程：戊戌年">
+                        <h3>厦外工程：戊戌年</h3>
+                        <p>使用 Unity 3D 引擎还原厦外校园</p>
+                        <span class="platform">Windows 游戏</span>
+                    </div>
+                    <div class="project-card press-effect">
+                        <img src="path/to/duye.jpg" alt="度夜">
+                        <h3>度夜</h3>
+                        <p>精心设计的百度深色主题插件</p>
+                        <span class="platform">Chromium 浏览器扩展</span>
+                    </div>
+                    <div class="project-card press-effect">
+                        <img src="path/to/covid.jpg" alt="新冠肺炎进者名录">
+                        <h3>新冠肺炎进者名录</h3>
+                        <p>我们不会忘记。</p>
+                        <span class="platform">全平台 线上应用</span>
+                    </div>
                 </div>
             </div>
         </section>
